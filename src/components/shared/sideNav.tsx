@@ -46,7 +46,7 @@ const navItems = [
 
 function SideNav() {
   return (
-    <div className="w-[23%] min-h-full bg-white px-8 py-12 rounded-md">
+    <div className="absolute w-full min-h-full bg-white px-8 py-12 rounded-md">
       <ul className="list-none flex flex-col gap-8">
         {navItems.map(
           (
