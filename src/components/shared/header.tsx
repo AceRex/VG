@@ -110,7 +110,7 @@ function Header() {
         )}
         <div
           className={`absolute ${
-            !openMenu ? "translate-x-0" : "translate-x-[100%]"
+            openMenu ? "translate-x-0" : "translate-x-[100%]"
           } w-full p-8 left-0 top-20 bg-white transition delay-300 ease-in-out`}
         >
           <div className="flex flex-row justify-center gap-2 items-center mb-5">
