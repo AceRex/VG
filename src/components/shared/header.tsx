@@ -5,7 +5,7 @@ import Logo from "../../assets/image/GO ICON WHITE 1.png";
 import userImage from "../../assets/image/userImage.jpeg";
 import { IoSearchOutline } from "react-icons/io5";
 import { GoHome } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AiOutlinePieChart } from "react-icons/ai";
 import { PiWalletLight } from "react-icons/pi";
 import { TbListCheck } from "react-icons/tb";
@@ -18,10 +18,14 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 
 const quickLinks = [
-  { name: "Home", href: "#", icon: <GoHome size={18} /> },
+  { name: "Home", href: "/", icon: <GoHome size={18} /> },
   { name: "Dashboard", href: "#", icon: <AiOutlinePieChart size={18} /> },
   { name: "Wallet", href: "#", icon: <PiWalletLight size={18} /> },
-  { name: "plan a trip", href: "#", icon: <TbListCheck size={18} /> },
+  {
+    name: "plan a trip",
+    href: "/plan-a-trip",
+    icon: <TbListCheck size={18} />,
+  },
   { name: "commission for life ", href: "#", icon: <PiHandCoins size={18} /> },
 ];
 const otherLinks = [
@@ -62,14 +66,18 @@ function Header() {
               }: { name: string; href: string; icon: React.ReactNode },
               index: number
             ) => (
-              <Link
+              <NavLink
                 to={href}
                 key={index}
-                className="flex hover:text-dark flex-col gap-2 tracking-tight items-center place-content-center text-neutralText"
+                className={({ isActive }) =>
+                  `flex hover:text-dark flex-col gap-2 tracking-tight items-center place-content-center ${
+                    !isActive ? "text-dark" : "text-neutralText"
+                  }`
+                }
               >
                 {icon}
                 <p className="capitalize text-xs">{name}</p>
-              </Link>
+              </NavLink>
             )
           )}
         </ul>
