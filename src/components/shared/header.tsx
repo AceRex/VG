@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+// @ts-ignore
 import Logo from "../../assets/image/GO ICON WHITE 1.png";
+// @ts-ignore
+import userImage from "../../assets/image/userImage.jpeg";
 import { IoSearchOutline } from "react-icons/io5";
 import { GoHome } from "react-icons/go";
 import { Link } from "react-router-dom";
@@ -11,7 +14,6 @@ import { PiBell } from "react-icons/pi";
 import { PiBasket } from "react-icons/pi";
 import { FiPlusSquare } from "react-icons/fi";
 import { GoChevronDown } from "react-icons/go";
-import userImage from "../../assets/image/userImage.jpeg";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 
@@ -35,17 +37,17 @@ function Header() {
   };
 
   return (
-    <div className="bg-white w-full relative p-5 flex flex-row items-center place-content-center px-8">
+    <div className="bg-white w-full relative p-3 flex flex-row items-center place-content-center px-8">
       <div className="flex flex-row gap-3 lg:w-2/6 w-[95%]">
-        <div className="bg-primary flex items-center w-12 h-12 p-1 object-center object-cover overflow-hidden rounded-md">
+        <div className="bg-primary flex items-center w-10 h-10 p-1 object-center object-cover overflow-hidden rounded-md">
           <img src={Logo} alt="logo" />
         </div>
         <div className="bg-body rounded-md w-80 px-4 flex flex-row gap-3 items-center">
           <IoSearchOutline size={20} className="text-neutralText" />
           <input
             type="search"
-            className="bg-transparent w-[90%] m-auto text-neutralText placeholder:text-neutralText focus:outline-none tracking-tighter"
-            placeholder="Search"
+            className="bg-transparent w-[90%] m-auto text-neutralText placeholder:text-neutralText placeholder:text-xs focus:outline-none tracking-tighter"
+            placeholder="Search..."
           />
         </div>
       </div>
@@ -63,7 +65,7 @@ function Header() {
               <Link
                 to={href}
                 key={index}
-                className="flex flex-col gap-2 tracking-tight items-center place-content-center  text-neutralText"
+                className="flex flex-col gap-2 tracking-tight items-center place-content-center text-neutralText"
               >
                 {icon}
                 <p className="capitalize text-xs">{name}</p>
