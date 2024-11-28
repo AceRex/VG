@@ -7,7 +7,7 @@ function App() {
   return (
     <main>
       <Header />
-      <div className="p-6 gap-6 flex flex-row">
+      <div className="p-4 gap-4 flex flex-row">
         <div className="relative w-[23%]">
           <SideNav />
         </div>
