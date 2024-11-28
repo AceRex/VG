@@ -52,7 +52,7 @@ function Header() {
         </div>
       </div>
       <div className="lg:flex hidden flex-row items-center place-content-center justify-between gap-4 w-4/6">
-        <ul className="flex flex-row w-1/2 items-center place-content-center justify-between gap-4 px-6 border-r border-neutralText">
+        <ul className="flex flex-row w-1/2 items-center place-content-center justify-between gap-4 px-4 border-r border-neutralText">
           {quickLinks.map(
             (
               {
@@ -65,7 +65,7 @@ function Header() {
               <Link
                 to={href}
                 key={index}
-                className="flex flex-col gap-2 tracking-tight items-center place-content-center text-neutralText"
+                className="flex hover:text-dark flex-col gap-2 tracking-tight items-center place-content-center text-neutralText"
               >
                 {icon}
                 <p className="capitalize text-xs">{name}</p>
@@ -73,8 +73,8 @@ function Header() {
             )
           )}
         </ul>
-        <ul className="flex flex-row w-1/2 items-center place-content-center justify-between gap-4 px-6">
-          <button className="bg-primary text-white capitalize p-2 h-10 rounded-md text-xs">
+        <ul className="flex flex-row w-1/2 items-center place-content-center justify-between gap-4 px-4">
+          <button className="bg-primary text-white capitalize p-2 h-10 rounded-md px-4 text-xs">
             subscribe
           </button>
           {otherLinks.map(
