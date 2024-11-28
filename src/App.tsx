@@ -7,7 +7,7 @@ function App() {
   return (
     <main>
       <Header />
-      <div className="p-6">
+      <div className="p-6 gap-3">
         <SideNav />
         <Outlet />
       </div>

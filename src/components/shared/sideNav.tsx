@@ -46,7 +46,7 @@ const navItems = [
 
 function SideNav() {
   return (
-    <div className="w-[23%] min-h-full bg-white p-10 rounded-md">
+    <div className="w-[23%] min-h-full bg-white px-8 py-12 rounded-md">
       <ul className="list-none flex flex-col gap-8">
         {navItems.map(
           (
@@ -65,7 +65,7 @@ function SideNav() {
       </ul>
       <div className="bg-body mt-10 p-4 w-full rounded-md flex flex-row gap-2">
         <div className="bg-primary text-white p-2 rounded-md"> Go</div>
-        <select className="bg-transparent focus:outline-none w-full capitalize tracking-tighter text-neutralText">
+        <select className="bg-transparent focus:outline-none w-full text-sm capitalize tracking-tighter text-neutralText">
           <option>personal account</option>
         </select>
       </div>
