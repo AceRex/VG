@@ -16,16 +16,16 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 
 const quickLinks = [
-  { name: "Home", href: "#", icon: <GoHome size={20} /> },
-  { name: "Dashboard", href: "#", icon: <AiOutlinePieChart size={20} /> },
-  { name: "Wallet", href: "#", icon: <PiWalletLight size={20} /> },
-  { name: "plan a trip", href: "#", icon: <TbListCheck size={20} /> },
-  { name: "commission for life ", href: "#", icon: <PiHandCoins size={20} /> },
+  { name: "Home", href: "#", icon: <GoHome size={18} /> },
+  { name: "Dashboard", href: "#", icon: <AiOutlinePieChart size={18} /> },
+  { name: "Wallet", href: "#", icon: <PiWalletLight size={18} /> },
+  { name: "plan a trip", href: "#", icon: <TbListCheck size={18} /> },
+  { name: "commission for life ", href: "#", icon: <PiHandCoins size={18} /> },
 ];
 const otherLinks = [
-  { name: "notification", href: "#", icon: <PiBell size={20} /> },
-  { name: "cart", href: "#", icon: <PiBasket size={20} /> },
-  { name: "create", href: "#", icon: <FiPlusSquare size={20} /> },
+  { name: "notification", href: "#", icon: <PiBell size={18} /> },
+  { name: "cart", href: "#", icon: <PiBasket size={18} /> },
+  { name: "create", href: "#", icon: <FiPlusSquare size={18} /> },
 ];
 
 function Header() {
@@ -108,7 +108,6 @@ function Header() {
         ) : (
           <IoClose size={20} onClick={handleOpenMenu} />
         )}
-        {/* {!openMenu && ( */}
         <div
           className={`absolute ${
             !openMenu ? "translate-x-0" : "translate-x-[100%]"
@@ -166,7 +165,6 @@ function Header() {
             )}
           </ul>
         </div>
-        {/* )} */}
       </div>
     </div>
   );
