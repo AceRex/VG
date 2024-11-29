@@ -6,6 +6,9 @@ import { PiUserPlusBold } from "react-icons/pi";
 import { PiDotsThreeBold } from "react-icons/pi";
 import SmallCard from "../../components/general/smallCard.tsx";
 import Itenaries from "./Itenaries.tsx";
+import Flights from "./flights.tsx";
+import Hotels from "./Hotel.tsx";
+import Activities from "./Activities.tsx";
 
 function PlanATrip() {
   return (
@@ -67,6 +70,9 @@ function PlanATrip() {
         </div>
       </div>
       <Itenaries />
+      <Flights />
+      <Hotels />
+      <Activities />
     </>
   );
 }
