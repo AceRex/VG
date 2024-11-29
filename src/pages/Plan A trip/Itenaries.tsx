@@ -6,6 +6,7 @@ function Itenaries() {
       <h1 className="font-semibold text-xl tracking-tighter capitalize">
         Trip itineraries
       </h1>
+      <p className="text-xs tracking-tighter text-neutralText">Your trip itineraries are placed here</p>
     </div>
   );
 }
