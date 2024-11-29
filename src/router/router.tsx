@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import App from "../App.tsx";
 import Home from "../pages/Home.tsx";
-import PlanATrip from "../pages/planATrip.tsx";
+import PlanATrip from "../pages/Plan A trip/index.tsx";
 
 function AppRouter() {
   return (
