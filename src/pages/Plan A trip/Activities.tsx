@@ -1,6 +1,6 @@
 import React from "react";
-import { IoMdClose } from "react-icons/io";
 import { PiRoadHorizon } from "react-icons/pi";
+import ActivityCard from "../../components/general/ActivityCard.tsx";
 
 function Activities() {
   return (
@@ -19,19 +19,7 @@ function Activities() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 my-4">
-        <div className="w-full flex flex-row items-center bg-white rounded-md overflow-hidden">
-          <div className="w-[20%] p-4">
-            <div className="h-40">
-              <img src="" alt="" />
-            </div>
-          </div>
-          <div className="w-[75%]"></div>
-          <div className="bg-accentRed h-full w-[5%] flex items-center place-content-center justify-center p-2">
-            <IoMdClose size={20} className="text-accentRedD" />
-          </div>
-        </div>
-      </div>
+      <ActivityCard />
     </section>
   );
 }

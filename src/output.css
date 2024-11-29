@@ -606,6 +606,16 @@ video {
   margin-bottom: 0.25rem;
 }
 
+.mx-3{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .mb-5{
   margin-bottom: 1.25rem;
 }
@@ -730,6 +740,14 @@ video {
   height: fit-content;
 }
 
+.h-12{
+  height: 3rem;
+}
+
+.h-7{
+  height: 1.75rem;
+}
+
 .min-h-full{
   min-height: 100%;
 }
@@ -850,6 +868,26 @@ video {
   width: 6rem;
 }
 
+.w-\[60\%\]{
+  width: 60%;
+}
+
+.w-12{
+  width: 3rem;
+}
+
+.w-7{
+  width: 1.75rem;
+}
+
+.w-\[25\%\]{
+  width: 25%;
+}
+
+.w-\[55\%\]{
+  width: 55%;
+}
+
 .translate-x-0{
   --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -928,6 +966,10 @@ video {
 
 .overflow-hidden{
   overflow: hidden;
+}
+
+.text-ellipsis{
+  text-overflow: ellipsis;
 }
 
 .text-wrap{
@@ -1039,6 +1081,11 @@ video {
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.bg-primaryDark{
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 54 157 / var(--tw-bg-opacity, 1));
 }
 
 .object-contain{
@@ -1157,6 +1204,10 @@ video {
   padding-right: 0.5rem;
 }
 
+.text-left{
+  text-align: left;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1205,6 +1256,10 @@ video {
 
 .font-light{
   font-weight: 300;
+}
+
+.uppercase{
+  text-transform: uppercase;
 }
 
 .capitalize{

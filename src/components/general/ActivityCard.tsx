@@ -1,14 +1,12 @@
 import React from "react";
-import { FiCalendar } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
-import { PiMapPinBold, PiStarFill, PiSwimmingPoolBold } from "react-icons/pi";
-import { TbGlassFull } from "react-icons/tb";
-import { PiBedFill } from "react-icons/pi";
+import { PiMapPinBold, PiStarFill } from "react-icons/pi";
+import { PiClockBold } from "react-icons/pi";
 
 // @ts-ignore
 import Hotel from "../../assets/image/hotelImg.png";
 
-function HotelCard() {
+function ActivityCard() {
   return (
     <div className="flex flex-col gap-3 my-4">
       <div className="w-full flex flex-row bg-white rounded-md overflow-hidden">
@@ -24,24 +22,24 @@ function HotelCard() {
           <div className="flex flex-row justify-between border-b border-body gap-3 p-3">
             <div className="flex flex-col">
               <p className="text-sm text-dark font-semibold tracking-tighter mb-1">
-                Riviera Resort, Lekki{" "}
+                The Museum of Modern Art{" "}
               </p>
               <p className="text-xs font-light text-dark w-[70%] text-wrap">
-                18, Kenneth Agbakuru Street, Off Access Bank Admiralty Way,
-                Lekki Phase1
+                Works from Van Gogh to Warhol & beyond plus a sculpture garden,
+                2 cafes & The modern restaurant
               </p>
               <div className="flex flex-row items-center gap-2 mt-2">
                 <div className="flex flex-row  gap-1 items-center text-primary">
                   <PiMapPinBold size={16} />{" "}
-                  <p className="text-xs">Show on map</p>
+                  <p className="text-xs">Directions</p>
                 </div>
                 <div className="flex flex-row  gap-1 items-center">
                   <PiStarFill size={16} className="text-yellow" />{" "}
                   <p className="text-dark text-xs">{"8.5(436)"}</p>
-                </div>{" "}
+                </div>
                 <div className="flex flex-row  gap-1 items-center">
-                  <PiBedFill size={16} className="text-dark" />{" "}
-                  <p className="text-dark text-xs">King size room</p>
+                  <PiClockBold size={16} className="text-dark" />{" "}
+                  <p className="text-dark text-xs">1 hours</p>
                 </div>
               </div>
             </div>
@@ -58,31 +56,15 @@ function HotelCard() {
             </div>
           </div>
           <div className="flex flex-row justify-between gap-3 p-3 border-b border-body">
-            <div className="flex flex-row items-center">
-              <p className="text-xs mr-2">Facilities:</p>
-              <div className="flex flex-row items-center gap-2">
-                <div className="flex flex-row  gap-1 items-center text-dark">
-                  <PiSwimmingPoolBold size={18} />{" "}
-                  <p className="text-xs">Pool</p>
-                </div>
-                <div className="flex flex-row  gap-1 items-center">
-                  <TbGlassFull size={18} className="text-dark" />{" "}
-                  <p className="text-dark text-xs">Bar</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row gap-2">
-              <p className="flex flex-row text-xs gap-1 text-dark font-light">
-                <FiCalendar size={15} /> Check In: 20-04-2024
-              </p>
-              <p className="flex flex-row text-xs gap-1 text-dark font-light">
-                <FiCalendar size={15} /> Check Out: 29-04-2024
-              </p>
+            <div className="flex flex-row items-center w-[80%]">
+              <p className="text-xs mr-2">What's Included:</p>
+              <div className="flex flex-row w-[50%] text-ellipsis items-center gap-2"></div>
+              <p className="text-primary text-xs">See more</p>
             </div>
           </div>
           <div className="flex flex-row justify-between gap-3 p-3 border-b border-body">
             <div className="flex flex-row items-center gap-5">
-              <p className="text-xs text-primary">Hotel details</p>
+              <p className="text-xs text-primary">Activity details</p>
               <p className="text-xs text-primary">Price details</p>
             </div>
             <div className="flex flex-row gap-2">
@@ -98,4 +80,4 @@ function HotelCard() {
   );
 }
 
-export default HotelCard;
+export default ActivityCard;
