@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      Click <span className="text-primary font-bold">"Plan a trip"</span> in the
+      header
+    </div>
+  );
 }
 
 export default Home;

@@ -19,14 +19,18 @@ import { IoClose } from "react-icons/io5";
 
 const quickLinks = [
   { name: "Home", href: "/home", icon: <GoHome size={18} /> },
-  { name: "Dashboard", href: "/", icon: <AiOutlinePieChart size={18} /> },
-  { name: "Wallet", href: "/", icon: <PiWalletLight size={18} /> },
+  { name: "Dashboard", href: "/home", icon: <AiOutlinePieChart size={18} /> },
+  { name: "Wallet", href: "/home", icon: <PiWalletLight size={18} /> },
   {
     name: "plan a trip",
     href: "/plan-a-trip",
     icon: <TbListCheck size={18} />,
   },
-  { name: "commission for life ", href: "/", icon: <PiHandCoins size={18} /> },
+  {
+    name: "commission for life ",
+    href: "/home",
+    icon: <PiHandCoins size={18} />,
+  },
 ];
 const otherLinks = [
   { name: "notification", href: "#", icon: <PiBell size={18} /> },
