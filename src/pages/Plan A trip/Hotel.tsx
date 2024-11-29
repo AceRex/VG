@@ -1,5 +1,6 @@
 import React from "react";
 import { PiBuildings } from "react-icons/pi";
+import HotelCard from "../../components/general/HotelCard.tsx";
 
 function Hotels() {
   return (
@@ -16,9 +17,7 @@ function Hotels() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 my-4">
-        <div className="w-full bg-white p-6 rounded-md">hello</div>
-      </div>
+      <HotelCard />
     </section>
   );
 }
