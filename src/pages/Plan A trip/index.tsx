@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 import { RiArrowRightLine } from "react-icons/ri";
 import { FiCalendar } from "react-icons/fi";
@@ -9,8 +9,25 @@ import Itenaries from "./Itenaries.tsx";
 import Flights from "./flights.tsx";
 import Hotels from "./Hotel.tsx";
 import Activities from "./Activities.tsx";
+import { useDispatch } from "react-redux";
+import { fetchFlights } from "../../Redux/slice.tsx";
 
 function PlanATrip() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const params = {
+      fromId: "BOM.AIRPORT",
+      toId: "DEL.AIRPORT",
+      pageNo: "1",
+      adults: "1",
+      children: "0,17",
+      sort: "BEST",
+      cabinClass: "ECONOMY",
+      currency_code: "AED",
+    };
+
+    dispatch(fetchFlights(params as any) as any);
+  }, []);
   return (
     <>
       <div className="h-[9rem] rounded-md bg-[#CFE9FF] hero relative">

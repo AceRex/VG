@@ -1,22 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { PiMapPinBold, PiStarFill } from "react-icons/pi";
 import { PiClockBold } from "react-icons/pi";
 
 // @ts-ignore
 import Hotel from "../../assets/image/hotelImg.png";
+// @ts-ignore
+import Muse from "../../assets/image/another.png";
+// @ts-ignore
+import rand from "../../assets/image/random.jpg";
+import {
+  BiSolidChevronLeftCircle,
+  BiSolidChevronRightCircle,
+} from "react-icons/bi";
+import Hotels from "../../pages/Plan A trip/Hotel";
 
 function ActivityCard() {
+  const images = [Hotel, Muse, rand];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
   return (
     <div className="flex flex-col gap-3 my-4">
       <div className="w-full flex flex-row bg-white rounded-md overflow-hidden">
         <div className="w-[20%] h-full p-4">
-          <div className="w-full h-[10rem] rounded-md overflow-hidden">
+          <div className="w-full relative h-[10rem] rounded-md overflow-hidden">
             <div className="h-full object-contain ">
-              <img src={Hotel} alt="" className="w-full h-full" />
+              <img
+                src={images[currentIndex]}
+                alt="alt-img"
+                className="w-full h-full"
+              />
+            </div>
+            <div className="absolute top-20 text-white w-full flex flex-row items-center place-content-center justify-between">
+              <BiSolidChevronLeftCircle
+                size={22}
+                onClick={handlePrev}
+                className="cursor-pointer"
+              />
+              <BiSolidChevronRightCircle
+                size={22}
+                onClick={handleNext}
+                className="cursor-pointer"
+              />
             </div>
           </div>
-          <div className="absolute"></div>
         </div>
         <div className="w-[75%] h-full">
           <div className="flex flex-row justify-between border-b border-body gap-3 p-3">
@@ -58,7 +96,7 @@ function ActivityCard() {
           <div className="flex flex-row justify-between gap-3 p-3 border-b border-body">
             <div className="flex flex-row items-center w-[80%]">
               <p className="text-xs mr-2">What's Included:</p>
-              <div className="flex flex-row w-[50%] text-ellipsis items-center gap-2"></div>
+              <div className="flex flex-row w-[40%] text-ellipsis items-center gap-2"></div>
               <p className="text-primary text-xs">See more</p>
             </div>
           </div>
@@ -72,8 +110,10 @@ function ActivityCard() {
             </div>
           </div>
         </div>
-        <div className="bg-accentRed h-fit text-center w-[5%] p-2">
-          <IoMdClose size={20} className="text-accentRedD" />
+        <div className="bg-accentRed h-full text-center w-[5%] py-[5.5rem] p-2">
+          <div className="w-[80%] flex justify-center m-auto">
+            <IoMdClose size={20} className="text-accentRedD" />
+          </div>
         </div>
       </div>
     </div>

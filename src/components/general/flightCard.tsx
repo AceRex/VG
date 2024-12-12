@@ -45,7 +45,7 @@ function FlightCard() {
                   <p className="text-xs">Duration: 1h 45m</p>
                   <PiAirplaneLandingBold size={17} />
                 </div>
-                <div className="flex flex-row items-center my-3 rounded-md place-content-center overflow-hidden justify-between bg-primary/20 ">
+                <div className="flex flex-row items-center my-3 rounded-md place-content-center overflow-hidden bg-primary/20 ">
                   <div className="bg-primary p-1 rounded-md w-[50%]"></div>
                 </div>
                 <div className="flex flex-row justify-between ">
@@ -100,8 +100,10 @@ function FlightCard() {
             </div>
           </div>
         </div>
-        <div className="bg-accentRed h-fit text-center w-[5%] p-2">
-          <IoMdClose size={20} className="text-accentRedD" />
+        <div className="bg-accentRed h-full text-center w-[5%] py-[5.5rem] p-2">
+          <div className="w-[80%] flex justify-center m-auto">
+            <IoMdClose size={20} className="text-accentRedD" />
+          </div>
         </div>
       </div>
     </div>

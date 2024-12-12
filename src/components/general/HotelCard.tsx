@@ -1,24 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiCalendar } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { PiMapPinBold, PiStarFill, PiSwimmingPoolBold } from "react-icons/pi";
 import { TbGlassFull } from "react-icons/tb";
 import { PiBedFill } from "react-icons/pi";
+import {
+  BiSolidChevronLeftCircle,
+  BiSolidChevronRightCircle,
+} from "react-icons/bi";
 
 // @ts-ignore
 import Hotel from "../../assets/image/hotelImg.png";
+// @ts-ignore
+import Muse from "../../assets/image/another.png";
+// @ts-ignore
+import rand from "../../assets/image/random.jpg";
 
 function HotelCard() {
+  const images = [Hotel, Muse, rand];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
   return (
     <div className="flex flex-col gap-3 my-4">
-      <div className="w-full flex flex-row bg-white rounded-md overflow-hidden">
+      <div className="w-full flex flex-row items-center bg-white rounded-md overflow-hidden">
         <div className="w-[20%] h-full p-4">
-          <div className="w-full h-[10rem] rounded-md overflow-hidden">
+          <div className="w-full relative h-[10rem] rounded-md overflow-hidden">
             <div className="h-full object-contain ">
-              <img src={Hotel} alt="" className="w-full h-full" />
+              <img
+                src={images[currentIndex]}
+                alt="alt-img"
+                className="w-full h-full"
+              />
+            </div>
+            <div className="absolute top-20 text-white w-full flex flex-row items-center place-content-center justify-between">
+              <BiSolidChevronLeftCircle
+                size={22}
+                onClick={handlePrev}
+                className="cursor-pointer"
+              />
+              <BiSolidChevronRightCircle
+                size={22}
+                onClick={handleNext}
+                className="cursor-pointer"
+              />
             </div>
           </div>
-          <div className="absolute"></div>
         </div>
         <div className="w-[75%] h-full">
           <div className="flex flex-row justify-between border-b border-body gap-3 p-3">
@@ -90,8 +127,10 @@ function HotelCard() {
             </div>
           </div>
         </div>
-        <div className="bg-accentRed h-fit text-center w-[5%] p-2">
-          <IoMdClose size={20} className="text-accentRedD" />
+        <div className="bg-accentRed h-full text-center w-[5%] py-[5.5rem] p-2">
+          <div className="w-[80%] flex justify-center m-auto">
+            <IoMdClose size={20} className="text-accentRedD" />
+          </div>
         </div>
       </div>
     </div>
